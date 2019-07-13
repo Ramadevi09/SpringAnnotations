@@ -16,14 +16,12 @@ public class Moive {
     private Actor actor;
 
 
-
-   /* public Moive(Actor actor) {
-        this.actor = actor;
-    }*/
-
-    public void setActor(Actor actor) {
+//constructor
+   public Moive(Actor actor) {
         this.actor = actor;
     }
+
+
 
     //display actor details using movie method
 public void moiveDisplay(){

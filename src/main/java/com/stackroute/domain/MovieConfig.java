@@ -1,9 +1,6 @@
 package com.stackroute.domain;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
+import org.springframework.context.annotation.*;
 
 @Configuration
 @PropertySource("classpath:actorvalues.properties")
@@ -14,9 +11,10 @@ public class MovieConfig {
         return actor;
     }
     @Bean
+    @Scope("prototype")
     public Moive moive(){
-        Moive moive=new Moive();
-moive.setActor(actor());
+        Moive moive=new Moive(actor());
+
         return moive;
     }
 

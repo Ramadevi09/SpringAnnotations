@@ -11,10 +11,13 @@ public class Actor {
     private String gender;
 @Value("${actor.Age}")
     private int age;
+public Actor(){}
 
-
-
-
+    public Actor(String name, String gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+    }
 
     //display the actor information
 public void display(){
