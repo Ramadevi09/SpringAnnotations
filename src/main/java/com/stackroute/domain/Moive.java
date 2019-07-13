@@ -18,13 +18,12 @@ public class Moive implements ApplicationContextAware,BeanFactoryAware,BeanNameA
         this.actor = actor;
     }
     //display actor details using movie method
+
 public void moiveDisplay(){
     System.out.println("display using movie class");
     actor.display();
 }
-
-
-    @Override
+@Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         System.out.println("in setApplicationContext method");
         Moive moive=applicationContext.getBean(Moive.class);

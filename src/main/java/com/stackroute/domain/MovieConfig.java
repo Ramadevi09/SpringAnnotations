@@ -7,13 +7,13 @@ import org.springframework.context.annotation.*;
 @ComponentScan("com.stackroute")
 public class MovieConfig {
 
-    @Bean
+   /* @Bean
     //@Scope("prototype")
     public Moive moive(){
         Moive moive=new Moive();
 
         return moive;
-    }
+    }*/
 
 
 }
