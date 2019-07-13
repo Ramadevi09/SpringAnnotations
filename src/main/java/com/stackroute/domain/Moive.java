@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Moive {
+public class Moive implements ApplicationContextAware,BeanFactoryAware,BeanNameAware{
     //actor class instantiation
     @Autowired
     private Actor actor;
@@ -24,5 +24,21 @@ public void moiveDisplay(){
 }
 
 
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        System.out.println("in setApplicationContext method");
+        Moive moive=applicationContext.getBean(Moive.class);
+        moive.moiveDisplay();
+        System.out.println();
+    }
 
+    @Override
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        System.out.println("bean factory is::"+beanFactory);
+    }
+
+    @Override
+    public void setBeanName(String beanName) {
+        System.out.println("bean name is:"+beanName);
+    }
 }
