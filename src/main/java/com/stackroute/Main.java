@@ -1,6 +1,7 @@
 package com.stackroute;
 
 import com.stackroute.demo.BeanLifecycleDemoBean;
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import com.stackroute.domain.Moive;
 import com.stackroute.domain.MovieConfig;
 import org.springframework.context.ApplicationContext;
@@ -12,7 +13,8 @@ public static void main(String[]args) {
     //using ApplicationContext
 
   AbstractApplicationContext context = new AnnotationConfigApplicationContext(MovieConfig.class);
-   BeanLifecycleDemoBean beanLifecycleDemoBean =context.getBean( BeanLifecycleDemoBean.class);
+  // BeanLifecycleDemoBean beanLifecycleDemoBean =context.getBean( BeanLifecycleDemoBean.class);
+    BeanPostProcessorDemoBean beanPostProcessorDemoBean=context.getBean(BeanPostProcessorDemoBean.class);
     context.close();
 
 
