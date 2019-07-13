@@ -4,16 +4,13 @@ import org.springframework.context.annotation.*;
 
 @Configuration
 @PropertySource("classpath:actorvalues.properties")
+@ComponentScan("com.stackroute")
 public class MovieConfig {
+
     @Bean
-    public Actor actor(){
-        Actor actor=new Actor();
-        return actor;
-    }
-    @Bean
-    @Scope("prototype")
+    //@Scope("prototype")
     public Moive moive(){
-        Moive moive=new Moive(actor());
+        Moive moive=new Moive();
 
         return moive;
     }

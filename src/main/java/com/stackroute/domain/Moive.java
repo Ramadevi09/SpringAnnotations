@@ -9,20 +9,14 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
-
+@Component
 public class Moive {
     //actor class instantiation
-
+    @Autowired
     private Actor actor;
-
-
-//constructor
-   public Moive(Actor actor) {
+    public void setActor(Actor actor) {
         this.actor = actor;
     }
-
-
-
     //display actor details using movie method
 public void moiveDisplay(){
     System.out.println("display using movie class");

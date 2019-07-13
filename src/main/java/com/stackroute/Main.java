@@ -12,17 +12,5 @@ public static void main(String[]args) {
    ApplicationContext context = new AnnotationConfigApplicationContext(MovieConfig.class);
    Moive moive1=context.getBean( Moive.class);
    moive1.moiveDisplay();
-    System.out.println();
-    Moive moive2=context.getBean(Moive.class);
-    moive2.moiveDisplay();
-    //checking bean scope
-    System.out.println(moive1==moive2);
-
-
-
-
-
-
-
 }
 }
