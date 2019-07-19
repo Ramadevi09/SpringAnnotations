@@ -3,6 +3,7 @@ package com.stackroute.domain;
 import org.springframework.context.annotation.*;
 
 @Configuration
+//property file location
 @PropertySource("classpath:actorvalues.properties")
 @ComponentScan("com.stackroute")
 public class MovieConfig {
