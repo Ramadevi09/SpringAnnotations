@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 
 public class Actor {
+    //injecting values using @value annotation
 @Value("${actor.Name}")
     private String name;
 @Value("${actor.Gender}")
