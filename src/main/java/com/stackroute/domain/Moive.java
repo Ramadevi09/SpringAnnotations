@@ -15,12 +15,6 @@ public class Moive {
 
     private Actor actor;
 
-
-
-   /* public Moive(Actor actor) {
-        this.actor = actor;
-    }*/
-
     public void setActor(Actor actor) {
         this.actor = actor;
     }
