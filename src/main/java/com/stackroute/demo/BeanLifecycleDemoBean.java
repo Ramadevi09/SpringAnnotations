@@ -16,11 +16,11 @@ public class BeanLifecycleDemoBean implements InitializingBean, DisposableBean {
     public void destroy() throws Exception {
         System.out.println("destroy");
     }
-
+//custom init method
     public void customInit(){
         System.out.println("customInit");
     }
-
+//custom destroy method
     public void customDestroy(){
         System.out.println("customDestroy");
     }
