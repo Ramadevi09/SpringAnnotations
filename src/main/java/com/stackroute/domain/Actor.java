@@ -5,12 +5,14 @@ import org.springframework.stereotype.Component;
 
 
 public class Actor {
+    //injecting actor values using @value annotation
 @Value("${actor.Name}")
     private String name;
 @Value("${actor.Gender}")
     private String gender;
 @Value("${actor.Age}")
     private int age;
+    //Actor default constructor
 public Actor(){}
 
     public Actor(String name, String gender, int age) {
