@@ -9,10 +9,11 @@ import org.springframework.context.support.AbstractApplicationContext;
 
 public class Main {
 public static void main(String[]args) {
-    //using ApplicationContext
+    //retriving actor details using ApplicationContext
 
   AbstractApplicationContext context = new AnnotationConfigApplicationContext(MovieConfig.class);
    BeanLifecycleDemoBean beanLifecycleDemoBean =context.getBean( BeanLifecycleDemoBean.class);
+   //closing ApplicationContext
     context.close();
 
 
