@@ -31,12 +31,12 @@ public void moiveDisplay(){
         moive.moiveDisplay();
         System.out.println();
     }
-
+//retriving beanfatory
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         System.out.println("bean factory is::"+beanFactory);
     }
-
+//retriving beanname
     @Override
     public void setBeanName(String beanName) {
         System.out.println("bean name is:"+beanName);
