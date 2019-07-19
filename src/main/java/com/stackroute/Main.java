@@ -7,7 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Main {
 public static void main(String[]args) {
-    //using ApplicationContext
+    //retriving actor details using ApplicationContext
 
    ApplicationContext context = new AnnotationConfigApplicationContext(MovieConfig.class);
    Moive moive1=context.getBean( Moive.class);
